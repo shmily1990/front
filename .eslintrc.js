@@ -2,6 +2,8 @@ module.exports = {
   root: true,
   env: {
     node: true,
+    browser: true,
+    es6: true,
   },
   extends: [
     "plugin:vue/vue3-essential",
@@ -16,6 +18,8 @@ module.exports = {
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    '@typescript-eslint/no-var-requires': 0,
+    '@typescript-eslint/explicit-module-boundary-types': "off"
   },
   overrides: [
     {
