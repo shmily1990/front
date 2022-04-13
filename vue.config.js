@@ -17,7 +17,9 @@ module.exports = {
       // 为开发环境修改配置...
       config.mode = "development";
     }
-
+    config["externals"] = {
+      AMap: "AMap",
+    };
     Object.assign(config, {
       // 开发生产共同配置
       resolve: {

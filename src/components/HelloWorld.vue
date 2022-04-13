@@ -1,49 +1,34 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br />
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
-        >vue-cli documentation</a
-      >.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <a-button type="primary">Primary Button</a-button>
-    <a-button>Default Button</a-button>
-    <a-button type="dashed">Dashed Button</a-button>
-    <a-button type="text">Text Button</a-button>
-    <a-button type="link">Link Button</a-button>
+    <span>{{ count }}</span>
+    <div>{{ count2 }}</div>
+    <a-button type="primary" @click="change">+1</a-button>
   </div>
 </template>
 
-<script lang="ts">
-import { Options, Vue } from "vue-class-component";
-
-@Options({
-  props: {
-    msg: String,
+<script>
+import { defineComponent, ref, computed } from "vue";
+import { useStore } from "vuex";
+export default defineComponent({
+  name: "hello",
+  components: {},
+  props: {},
+  setup() {
+    const count = ref(0);
+    const store = useStore();
+    const count2 = computed(() => {
+      return count.value + 2;
+    });
+    console.log(store);
+    function change() {
+      count.value++;
+      store.commit("app/SET_COLLAPSE", true);
+    }
+    return {
+      count,
+      change,
+      count2,
+    };
   },
-})
-export default class HelloWorld extends Vue {
-  msg!: string;
-}
+});
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>

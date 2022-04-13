@@ -1,0 +1,153 @@
+@import "./reset";
+@import "./animate";
+
+html, body {
+  height: 100%;
+	-webkit-tap-highlight-color:transparent;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	font-size: 14px;
+}
+
+body {
+	// font-family: fzzxh, Avenir, Helvetica, Arial, sans-serif;
+	font-family: sy,fzzxh, Avenir, Helvetica, Arial, sans-serif;
+	min-width: 768px;
+}
+
+
+
+.amap-controlbar {
+	transform: scale(0.3);
+}
+.tools-content {
+	background: #fff;
+}
+.control-tooltip {
+	left: auto !important;
+	right: 50px;
+	white-space: nowrap;
+	.ant-tooltip-inner {
+		background: #686969;
+	}
+}
+.city-marker {
+	border-radius: 20px;
+	padding: 2px 6px;
+	font-size: 14px;
+	white-space: nowrap;
+	text-align: center;
+	color: #000000;
+	min-width: 33px;
+}
+.icon16 {
+	font-size: 16px;
+}
+
+.icon20 {
+	font-size: 20px;
+}
+
+.icon24 {
+	font-size: 24px;
+}
+
+.icon14 {
+	font-size: 14px;
+}
+
+.grey {
+	color: #969799;
+}
+
+.font12 {
+	font-size: 12px;
+}
+
+i:hover {
+	cursor: pointer;
+}
+
+.odd {
+	background: #fff;
+}
+
+.even {
+	background: #f7f8fa;
+}
+
+.icon-active {
+	color: #266bff;
+}
+.ant-select-tree-checkbox-checked .ant-select-tree-checkbox-inner {
+    background-color: #14C3BA !important;
+    border-color: #14C3BA !important;
+}
+
+.ant-select-tree-checkbox-indeterminate .ant-select-tree-checkbox-inner::after{
+	background-color: #14C3BA !important;
+}
+.ant-btn-primary {
+    color: #fff;
+    background: #32b1ab !important;
+    border-color: #32b1ab !important;
+}
+// antd日历组件样式
+.ant-calendar-today .ant-calendar-date {
+	color: #14c3ba !important;
+    border-color: #14c3ba !important;
+}
+.ant-calendar-date[aria-selected=true] {
+	color: #fff !important;
+}
+a:hover {
+	color: #14C3BA !important;
+}
+.ant-calendar-ok-btn:hover {
+	color: #fff !important;
+}
+.ant-calendar-time-picker-select li:focus {
+	color: #14C3BA !important;
+}
+// input 样式组件
+// .ant-input:focus {
+// 	border-color: #14C3BA !important;
+//     border-right-width: 1px !important;
+//     outline: 0;
+//     box-shadow: 0 0 0 2px rgba(19, 191, 182, 0.2) !important;
+// }
+// .ant-input:hover {
+// 	border-color: #14C3BA !important;
+//     border-right-width: 1px !important;
+//     outline: 0;
+//     box-shadow: 0 0 0 2px rgba(19, 191, 182, 0.2) !important;
+// }
+// .ant-select-dropdown .ant-select-tree li span.ant-select-tree-switcher {
+// 	position: absolute;
+// 	z-index: 9;
+// }
+// .ant-select-tree li span.ant-select-tree-iconEle, .ant-select-tree li span.ant-select-tree-switcher {
+// 	width: 240px;
+// 	text-align: left;
+// }
+// .ant-select-tree li span.ant-select-tree-switcher.ant-select-tree-switcher-noop {
+// 	width: 24px;
+// }
+// .ant-select-tree li .ant-select-tree-node-content-wrapper {
+// 	padding-left: 20px !important;
+// }
+// .ant-select-tree li span.ant-select-tree-checkbox {
+// 	margin-left: 20px;
+// 	z-index: 99;
+// }
+// .ant-select-tree li span.ant-select-tree-checkbox-checked:after {
+// 	border: none;
+// }
+
+// content最小高度 屏幕高度 - filter高度 - filter上下外边距 - 顶部42和面包屑40 - content下外边距15 - 52px
+.min-height {
+    min-height: calc(100vh - 154px - 32px - 92px - 15px);
+  }
+.filter-box {	
+	margin: 12px 16px 16px 16px !important;
+}
