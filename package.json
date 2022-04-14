@@ -6,7 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-dev": "vue-cli-service build --mode development",
+    "build-prod": "vue-cli-service build --mode production"
   },
   "dependencies": {
     "@amap/amap-jsapi-loader": "^1.0.1",
