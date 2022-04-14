@@ -5,22 +5,14 @@
 </template>
 
 <script>
-import {
-  defineComponent,
-  ref,
-  computed,
-  onMounted,
-  getCurrentInstance,
-} from "vue";
+import { defineComponent, onMounted } from "vue";
 import proxyAmap from "@/utils/map/aMap";
-// import { useStore } from "vuex";
 let map = null;
 export default defineComponent({
   name: "home",
   components: {},
   props: {},
-  setup(props, ctx) {
-    const { proxy } = getCurrentInstance();
+  setup() {
     async function initAmap() {
       map = await proxyAmap();
       map.init("mapContainer", {
@@ -31,10 +23,7 @@ export default defineComponent({
       });
     }
     onMounted(() => {
-      console.log(proxy);
-      console.log(proxy.$bus);
-      console.log(ctx);
-      // initAmap();
+      initAmap();
     });
   },
 });
