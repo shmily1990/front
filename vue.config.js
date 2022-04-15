@@ -1,36 +1,36 @@
-const path = require("path");
-const sourceMap = process.env.NODE_ENV === "development";
+const path = require('path')
+const sourceMap = process.env.NODE_ENV === 'development'
 module.exports = {
   // 基本路径
-  publicPath: "./",
+  publicPath: './',
   // 输出文件目录
-  outputDir: "dist",
+  outputDir: 'dist',
   // eslint-loader 是否在保存的时候检查
   lintOnSave: true,
   // webpack配置
   // chainWebpack: config => {},
   configureWebpack: (config) => {
-    if (process.env.NODE_ENV === "production") {
+    if (process.env.NODE_ENV === 'production') {
       // 为生产环境修改配置...
-      config.mode = "production";
+      config.mode = 'production'
     } else {
       // 为开发环境修改配置...
-      config.mode = "development";
+      config.mode = 'development'
     }
-    config["externals"] = {
-      AMap: "AMap",
-    };
+    config['externals'] = {
+      AMap: 'AMap',
+    }
     Object.assign(config, {
       // 开发生产共同配置
       resolve: {
-        extensions: [".js", ".vue", ".json", ".ts", ".tsx", ".styl"],
+        extensions: ['.js', '.vue', '.json', '.ts', '.tsx', '.styl'],
         alias: {
-          "@": path.resolve(__dirname, "./src"),
-          "~styl": path.resolve(__dirname, "./src/style"),
-          "@c": path.resolve(__dirname, "./src/components"),
+          '@': path.resolve(__dirname, './src'),
+          '~styl': path.resolve(__dirname, './src/style'),
+          '@c': path.resolve(__dirname, './src/components'),
         },
       },
-    });
+    })
   },
   // 生产环境是否生成 sourceMap 文件
   productionSourceMap: sourceMap,
@@ -47,7 +47,7 @@ module.exports = {
   },
   // 在生产构建中对babel & TS使用线程加载器
   // 如果机器有超过1个核，则默认启用
-  parallel: require("os").cpus().length > 1,
+  parallel: require('os').cpus().length > 1,
   // PWA 插件相关配置
   // see https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa
   pwa: {},
@@ -76,4 +76,4 @@ module.exports = {
   pluginOptions: {
     // ...
   },
-};
+}

@@ -3,7 +3,7 @@
 </template>
 
 <style lang="scss">
-@import "~@/assets/css/index";
+@import '~@/assets/css/index';
 #app {
   font-family: sy, fzzxh, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

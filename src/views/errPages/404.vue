@@ -17,16 +17,16 @@
 </template>
 <script lang="ts">
 export default {
-  name: "",
+  name: '',
   /** 父组件传过来的值 */
   props: {},
   /** 组件 */
   components: {},
   setup() {
     /** 返回值 */
-    return {};
+    return {}
   },
-};
+}
 </script>
 <style lang="scss" scoped>
 .errPage404 {

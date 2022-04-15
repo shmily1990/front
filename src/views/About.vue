@@ -5,34 +5,35 @@
 </template>
 
 <script>
-import { onMounted, reactive } from "vue";
+import { onMounted, reactive } from 'vue'
 export default {
+  components: {},
   setup() {
     const state = reactive({
       option: {
         xAxis: {
-          type: "category",
-          data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+          type: 'category',
+          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
         },
         yAxis: {
-          type: "value",
+          type: 'value',
         },
         series: [
           {
             data: [150, 230, 224, 218, 135, 147, 260],
-            type: "line",
+            type: 'line',
           },
         ],
       },
-    });
+    })
     onMounted(() => {
-      console.log(state);
-    });
+      console.log(state)
+    })
     return {
       state,
-    };
+    }
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>
